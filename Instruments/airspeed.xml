@@ -31,7 +31,7 @@ properties' values.
   
 
   <params>
-   <airspeed-kt>/steam/airspeed-kt</airspeed-kt>
+   <airspeed-kt>/instrumentation/airspeed-indicator/indicated-speed-kt</airspeed-kt>
   </params> 
 
  <layers>
