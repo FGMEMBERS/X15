@@ -237,62 +237,69 @@ properties' values.
  </layers>
 
  <actions>
-  <a1>
+  <action>
    <name>small clockwise rotation</name>
-   <type>adjust</type>
    <button>0</button>
    <x>-64</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+   <binding>
+   <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>-1.0</increment>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
-  </a1>
-  <a2>
+  </binding>
+  </action>
+  <action>
    <name>large clockwise rotation</name>
-   <type>adjust</type>
    <button>1</button>
    <x>-64</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+   <binding>
+   <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>-5.0</increment>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
-  </a2>
-  <a3>
+  </binding>
+  </action>
+  <action>
    <name>small counter-clockwise rotation</name>
-   <type>adjust</type>
-   <button>0</button>
    <x>-51</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+   <binding>
+   <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>1.0</increment>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
-  </a3>
-  <a4>
+  </binding>
+  </action>
+  <action>
    <name>large counter-clockwise rotation</name>
-   <type>adjust</type>
    <button>1</button>
    <x>-51</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+   <binding>
+   <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>5.0</increment>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
-  </a4>
+  </binding>
+  </action>
  </actions>
 
 </PropertyList>

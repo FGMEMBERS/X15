@@ -184,62 +184,70 @@ properties' values.
  <actions>
   <action>
    <name></name>
-   <type>adjust</type>
    <button>0</button>
    <x>-64</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
-   <property>/steam/horizon-adjust</property>
+  <binding>
+  <command>property-adjust</command>
+  <property>/steam/horizon-adjust</property>
    <increment>-0.5</increment>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
+   </binding>
   </action>
   
   <action>
    <name></name>
-   <type>adjust</type>
    <button>1</button>
    <x>-64</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+  <binding>
+  <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
    <increment>-5</increment>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
+   </binding>
   </action>
 
   <action>
    <name></name>
-   <type>adjust</type>
    <button>0</button>
    <x>-51</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+  <binding>
+  <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
    <increment>0.5</increment>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
+   </binding>
   </action>
 
   <action>
    <name></name>
-   <type>adjust</type>
    <button>1</button>
    <x>-51</x>
    <y>-64</y>
    <w>13</w>
    <h>26</h>
+  <binding>
+  <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
    <increment>5</increment>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
+   </binding>
  </action>
 
 </actions>
