@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<!--
+X-15 accellerometer.
+November 2000
+John Check
+______________________________________________________________________
+
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's layers and actions.
+
+Each instrument is composed of layers stacked on top of each other.
+A layer may be a texture (with transparent parts to show the layers
+underneath), text, or a special layer that switches between two
+others (say, to turn an indicator light on or off).  Each layer can
+move independently in proportion to a property value, and text
+can be generated from property values as well: all of the layer's
+movements are defined as transformations.
+
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swaping them with other
+properties' values.
+-->
+
+<PropertyList>
+ <name>acceleration</name>
+ <w>110</w>
+ <h>110</h>
+
+ <layers>
+
+  <l1>
+   <name>face</name>
+   <texture>
+    <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.5</y1>
+    <x2>0.5</x2>
+    <y2>1.0</y2>
+   </texture>
+  </l1>
+  
+  <l2>
+   <name>needle</name>
+   <texture>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>8</w>
+   <h>45</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/velocities/accel</property>
+     <min>-50.0</min>
+     <max>120.0</max>
+     <scale>2.0</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>23</offset>
+    </t2>
+   </transformations>
+  </l2>
+  <l3>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>16</w>
+  <h>16</h>
+  </l3>
+ </layers>
+</PropertyList>
