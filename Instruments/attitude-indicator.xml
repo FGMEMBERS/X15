@@ -38,7 +38,7 @@ properties' values.
   <layer>
    <name>background</name>
    <texture>
-    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+    <path>Aircraft/Instruments/Textures/default-attitude-indicator.rgb</path>
     <x1>0.51</x1>
     <y1>0.51</y1>
     <x2>1.0</x2>
@@ -53,19 +53,19 @@ properties' values.
      <scale>-1</scale>
     </transformation>
    </transformations>
+   <w>128</w>
+   <h>128</h>
   </layer>
-<!-- fix misc.rgb -->
+ 
   <layer>
    <name>float</name>
    <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.46875</x1>
-    <y1>0.421875</y1>
-    <x2>0.875</x2>
-    <y2>0.6796875</y2>
+    <path>Aircraft/Instruments/Textures/default-attitude-indicator.rgb</path>
+    <x1>0.00390625</x1>
+    <x2>0.40234375</x2>
+    <y1>0.625</y1>
+    <y2>0.8828125</y2>
    </texture>
-   <w>104</w>
-   <h>66</h>
    <transformations>
     <transformation>
      <type>rotation</type>
@@ -83,12 +83,14 @@ properties' values.
      <offset>0</offset>
     </transformation>
    </transformations>
+   <w>104</w>
+   <h>66</h>
   </layer>
 
   <layer>
    <name>rim</name>
    <texture>
-    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+    <path>Aircraft/Instruments/Textures/default-attitude-indicator.rgb</path>
     <x1>0</x1>
     <y1>0</y1>
     <x2>0.49</x2>
@@ -103,37 +105,38 @@ properties' values.
      <scale>-1</scale>
     </transformation>
    </transformations>
+   <w>128</w>
+   <h>128</h>
   </layer>
 
 
   <layer>
    <name>front top</name>
    <texture>
-    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+    <path>Aircraft/Instruments/Textures/default-attitude-indicator.rgb</path>
     <x1>0.5</x1>
     <y1>0.25</y1>
     <x2>1.0</x2>
     <y2>0.5</y2>
    </texture>
-   <h>64</h>
     <transformations>
     <transformation>
      <type>y-shift</type>
      <offset>32</offset>
     </transformation>
    </transformations>
+   <h>64</h>
  </layer>
 
  <layer> 
   <name>plane</name>
   <texture>
-   <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+   <path>Aircraft/Instruments/Textures/default-attitude-indicator.rgb</path>
    <x1>0.5</x1>
    <y1>0.0</y1>
    <x2>1.0</x2>
    <y2>0.25</y2>
   </texture>
-  <h>64</h>
   <transformations>
    <transformation>
     <type>y-shift</type>
@@ -144,17 +147,19 @@ properties' values.
    <property>/steam/horizon-adjust</property>
    </transformation>
   </transformations>  
+  <h>64</h>
  </layer>
+
  <layer>
   <name>bezel</name>
   <texture>
-   <path>Aircraft/c172/Instruments/Textures/bezel.rgb</path>
+   <path>Aircraft/Instruments/Textures/bezel.rgb</path>
    <x1>0.0</x1>
    <y1>0.0</y1>
    <x2>1.0</x2>
    <y2>1.0</y2>
-   <w>200</w>
-   <h>200</h>
+   <w>256</w>
+   <h>256</h>
   </texture>
  </layer>
  
