@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="X-15" VERSION="1.61">
+<FDM_CONFIG NAME="X-15" VERSION="1.65">
   <!--
 
   File:        X15.xml
@@ -119,15 +119,14 @@
       YAW    0.0
       FEED     0
       FEED     1
+      <AC_THRUSTER FILE="xlr99_nozzle">
+        XLOC  600.0
+        YLOC    0.0
+        ZLOC    0.0
+        PITCH   0.0
+        YAW     0.0
+      </AC_THRUSTER>
     </AC_ENGINE>
-
-    <AC_THRUSTER FILE="xlr99_nozzle">
-      XLOC  600.0
-      YLOC    0.0
-      ZLOC    0.0
-      PITCH   0.0
-      YAW     0.0
-    </AC_THRUSTER>
   </PROPULSION>
 
   <!--
