@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-X-15 position indicator instrument.
+X-15 roll indicator instrument.
 October 2000
 John Check
 ______________________________________________________________________
@@ -25,25 +25,23 @@ properties' values.
 -->
 
 <PropertyList>
- <name>control position indicators</name>
- <w>200</w>
- <h>125</h>
+ <name>roll indicator</name>
+ <w>125</w>
+ <h>90</h>
 
  <layers>
-
   <l1>
    <name>background</name>
    <texture>
-    <path>Panels/X15/Textures/x15.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.70</y1>
-    <x2>0.5</x2>
-    <y2>1.0</y2>
+    <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
+    <x1>0.5</x1>
+    <y1>0.15</y1>
+    <x2>1.0</x2>
+    <y2>0.5</y2>
    </texture>
   </l1>
-  
   <l2>
-   <name>roll indicator</name>
+   <name>needle</name>
    <w>8</w>
    <h>16</h>
    <texture>
@@ -54,11 +52,11 @@ properties' values.
     <y2>1.0</y2>
    </texture>
    <w>10</w>
-   <h>86</h>
+   <h>60</h>
    <transformations>
     <t0>
     <type>y-shift</type>
-    <offset>-40</offset>
+    <offset>-30</offset>
     </t0>
     <t1>
      <type>rotation</type>
@@ -66,115 +64,13 @@ properties' values.
      <min>-100.0</min>
      <max>100.0</max>
      <scale>1.0</scale>
+    <wrap>false</wrap>
     </t1>
     <t2>
      <type>y-shift</type>
-     <offset>38</offset>
+     <offset>30</offset>
     </t2>
    </transformations>
   </l2>
-<!--
-  <l3>
-   <name>rudder indicator</name>
-   <w>8</w>
-   <h>8</h>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.84375</x1>
-    <y1>0.8125</y1>
-    <x2>0.875</x2>
-    <y2>0.84375</y2>
-   </texture>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <offset>180</offset>
-     <property>/controls/rudder</property>
-     <min>-1</min>
-     <max>1</max>
-     <scale>-42</scale>
-    </t1>
-    <t2>
-     <type>x-shift</type>
-     <property>/controls/rudder</property>
-     <min>-1</min>
-     <max>1</max>
-     <scale>-42</scale>
-    </t2>
-    <t3>
-     <type>y-shift</type>
-     <offset>52</offset>
-    </t3>
-   </transformations>
-  </l3>
-
-  <l4>
-   <name>elevator trim indicator</name>
-   <w>8</w>
-   <h>8</h>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.84375</x1>
-    <y1>0.8125</y1>
-    <x2>0.875</x2>
-    <y2>0.84375</y2>
-   </texture>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <offset>270</offset>
-    </t1>
-    <t2>
-     <type>y-shift</type>
-     <offset>-42</offset>
-    </t2>
-    <t3>
-     <type>x-shift</type>
-     <property>/controls/elevator-trim</property>
-     <min>-1.0</min>
-     <max>1.0</max>
-     <scale>42</scale>
-    </t3>
-    <t4>
-     <type>y-shift</type>
-     <offset>52</offset>
-    </t4>
-   </transformations>
-  </l4>
-
-  <l5>
-   <name>elevator indicator</name>
-   <w>8</w>
-   <h>8</h>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.84375</x1>
-    <y1>0.8125</y1>
-    <x2>0.875</x2>
-    <y2>0.84375</y2>
-   </texture>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <offset>90</offset>
-    </t1>
-    <t2>
-     <type>y-shift</type>
-     <offset>-42</offset>
-    </t2>
-    <t3>
-     <type>x-shift</type>
-     <property>/controls/elevator</property>
-     <min>-1.0</min>
-     <max>1.0</max>
-     <scale>42</scale>
-    </t3>
-    <t4>
-     <type>y-shift</type>
-     <offset>52</offset>
-    </t4>
-   </transformations>
-  </l5>
--->
  </layers>
 </PropertyList>
