@@ -40,7 +40,7 @@ override those by providing <w>..</w> and <h>..</h> properties with the
   <view-height>275</view-height>
 
  <instruments>
-  
+
   <instrument include="../Instruments/inertialclimb.xml">
    <name>Inertial Climb</name>
    <x>715</x>
@@ -57,7 +57,7 @@ override those by providing <w>..</w> and <h>..</h> properties with the
    <h>128</h>
   </instrument>
 
-  <instrument include="../Instruments/accel.xml">
+  <instrument include="../Instruments/accelerometer.xml">
    <name>Acceleration</name>
    <x>375</x>
    <y>615</y>
@@ -89,8 +89,8 @@ override those by providing <w>..</w> and <h>..</h> properties with the
    <h>128</h>
   </instrument>
 
-  <instrument include="../Instruments/horizon.xml">
-   <name>Horizon</name>
+  <instrument include="../Instruments/attitude-indicator.xml">
+   <name>Attitude Indicator</name>
    <x>506</x>
    <y>505</y>
    <w>150</w>

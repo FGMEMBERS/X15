@@ -28,35 +28,24 @@ properties' values.
  <name>inertial height indicator</name>
  <w-base>125</w-base>
  <h-base>125</h-base>
-
+ 
+ <params>
+  <inertial-height>/position/altitude-ft</inertial-height>
+ </params>
+ 
  <layers>
 
-  <layer>
-   <name>background</name>
-   <texture>
-    <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.5</y2>
-   </texture>
+  <layer include="./X15-inertial-height-face.xml">
   </layer>
   
-  <layer>
+  <layer include="./needle.xml">
    <name>ten thousands needle</name>
-   <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.8</x1>
-    <y1>0.78125</y1>
-    <x2>0.8375</x2>
-    <y2>1.0</y2>
-   </texture>
    <w>8</w>
    <h>25</h>
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/position/altitude-ft</property>
+     <property alias="../../../../../params/inertial-height"/>
      <max>100000.0</max>
      <scale>0.0036</scale>
     </transformation>
@@ -66,21 +55,14 @@ properties' values.
     </transformation>
    </transformations>
   </layer>
-  <layer>
+  <layer include="./needle.xml">
    <name>thousands needle</name>
-   <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.8</x1>
-    <y1>0.78125</y1>
-    <x2>0.8375</x2>
-    <y2>1.0</y2>
-   </texture>
    <w>8</w>
    <h>35</h>
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/position/altitude-ft</property>
+     <property alias="../../../../../params/inertial-height"/>
      <max>100000.0</max>
      <scale>0.036</scale>
     </transformation>
@@ -90,21 +72,14 @@ properties' values.
     </transformation>
    </transformations>
   </layer>
-  <layer>
+  <layer include="./needle.xml">
    <name>hundreds needle</name>
-   <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.8</x1>
-    <y1>0.78125</y1>
-    <x2>0.8375</x2>
-    <y2>1.0</y2>
-   </texture>
    <w>8</w>
    <h>56</h>
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/position/altitude-ft</property>
+     <property alias="../../../../../params/inertial-height"/>
      <max>100000.0</max>
      <scale>0.36</scale>
     </transformation>
@@ -114,17 +89,11 @@ properties' values.
     </transformation>
    </transformations>
   </layer>
- <layer>
-  <name>button</name>
-  <texture>
-  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-  <x1>0.6171875</x1>
-  <y1>0.2421875</y1>
-  <x2>0.7890625</x2>
-  <y2>0.4140625</y2>
-  </texture>
+
+  <layer include="./center-cap.xml">
   <w>16</w>
   <h>16</h>
   </layer>
+
  </layers>
 </PropertyList>

@@ -28,29 +28,17 @@ properties' values.
  <name>angle of attack indicator</name>
  <w-base>125</w-base>
  <h-base>125</h-base>
-
+ 
+ <params>
+  <angle-of-attack>/orientation/pitch-deg</angle-of-attack>
+ </params>
+ 
  <layers>
 
-  <layer>
-   <name>background</name>
-   <texture>
-    <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.5</y1>
-    <x2>0.5</x2>
-    <y2>1.0</y2>
-   </texture>
+  <layer include="./aoa-face.xml">
   </layer>
   
-  <layer>
-   <name>a-o-a indicator</name>
-   <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.796875</x1>
-    <y1>0.78125</y1>
-    <x2>0.8359375</x2>
-    <y2>1.0</y2>
-   </texture>
+  <layer include="./needle.xml">
    <w>8</w>
    <h>65</h>
    <transformations>
@@ -68,7 +56,7 @@ properties' values.
     </transformation>
     <transformation>
      <type>rotation</type>
-     <property>/orientation/pitch-deg</property>
+     <property alias="../../../../../params/angle-of-attack"/>
      <min>-10.0</min>
      <max>40.0</max>
      <scale>-2.0</scale>
@@ -80,15 +68,8 @@ properties' values.
     </transformation>
    </transformations>
   </layer>
- <layer>
-  <name>button</name>
-  <texture>
-  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-  <x1>0.6171875</x1>
-  <y1>0.2421875</y1>
-  <x2>0.7890625</x2>
-  <y2>0.4140625</y2>
-  </texture>
+
+  <layer include="./center-cap.xml">
   <w>16</w>
   <h>16</h>
    <transformations>

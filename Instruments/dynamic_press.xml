@@ -29,34 +29,22 @@ properties' values.
  <w-base>110</w-base>
  <h-base>110</h-base>
 
+ <params>
+  <dynamic-pressure>/velocities/airspeed-kt</dynamic-pressure>
+ </params>
+
  <layers>
 
-  <layer>
-   <name>face</name>
-   <texture>
-    <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
-    <x1>0.5</x1>
-    <y1>0.0</y1>
-    <x2>1.0</x2>
-    <y2>0.5</y2>
-   </texture>
+  <layer include="./dynamic-pressure-face.xml">
   </layer>
   
-  <layer>
-   <name>needle</name>
-   <texture>
-    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-    <x1>0.8</x1>
-    <y1>0.78125</y1>
-    <x2>0.8375</x2>
-    <y2>1.0</y2>
-   </texture>
+  <layer include="./needle.xml">
    <w>8</w>
    <h>45</h>
    <transformations>
     <transformation>
      <type>rotation</type>
-     <property>/velocities/airspeed-kt</property>
+     <property alias="../../../../../params/dynamic-pressure"/>
      <min>0.0</min>
      <max>250.0</max>
      <scale>1</scale>
@@ -68,17 +56,11 @@ properties' values.
     </transformation>
    </transformations>
   </layer>
-  <layer>
-  <name>button</name>
-  <texture>
-  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
-  <x1>0.6171875</x1>
-  <y1>0.2421875</y1>
-  <x2>0.7890625</x2>
-  <y2>0.4140625</y2>
-  </texture>
+
+  <layer include="./center-cap.xml">
   <w>16</w>
   <h>16</h>
   </layer>
+
  </layers>
 </PropertyList>
