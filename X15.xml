@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="X-15" VERSION="1.50">
+<FDM_CONFIG NAME="X-15" VERSION="1.55">
   <!--
 
   File:        X15.xml
@@ -6,8 +6,6 @@
   CVS Version: $Id$
 
   Function: Models an X-15
-  Notes:    Try running FlightGear using this command line,
-            fgfs --fdm=jsb --aircraft=X15 --altitude=60000 --uBody=2000 --wBody=120
   -->
 
   <METRICS>
