@@ -140,7 +140,7 @@ properties' values.
    <name>TO/FROM/OFF flag</name>
    <type>switch</type>
    <property>/radios/nav[0]/to-flag</property>
-   <layer1>
+   <layer>
     <name>TO flag</name>
     <texture>
      <path>Instruments/Default/Textures/misc-1.rgb</path>
@@ -151,12 +151,12 @@ properties' values.
     </texture>
     <w>16</w>
     <h>16</h>
-   </layer1>
-   <layer2>
+   </layer>
+   <layer>
     <name>FROM/OFF flag</name>
     <type>switch</type>
     <property>/radios/nav[0]/from-flag</property>
-    <layer1>
+    <layer>
      <name>FROM flag</name>
      <texture>
       <path>Instruments/Default/Textures/misc-1.rgb</path>
@@ -167,8 +167,8 @@ properties' values.
      </texture>
      <w>16</w>
      <h>16</h>
-    </layer1>
-    <layer2>
+    </layer>
+    <layer>
      <name>OFF flag</name>
      <texture>
       <path>Instruments/Default/Textures/misc-1.rgb</path>
@@ -179,8 +179,8 @@ properties' values.
      </texture>
      <w>16</w>
      <h>16</h>
-    </layer2>
-   </layer2>
+    </layer>
+   </layer>
    <transformations>
     <t1>
      <type>y-shift</type>
