@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
 <!--
-Modified artificial horizon instrument.
-Added a background fill layer to work with shaped panel hack
-October, 2000 
+X15 artificial horizon instrument.
+Oct 13 2000
 John Check <j4strngs@rockfish.net>
- 
+_______________________________________________________________________________
+
 Based on Default by David Megginson, david@megginson.com.
 
 This is an instrument configuration file for the open-source flight
@@ -34,58 +34,13 @@ properties' values.
  <h>128</h>
 
  <layers>
-<!--
- <l0>
-   <texture>
-   <name>bg1</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>70</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>32</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>48</offset>
-   </t2>
-  </transformations>  
-</l0>
- <l01>
-   <texture>
-   <name>bg1</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>70</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>-32</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>48</offset>
-   </t2>
-  </transformations>  
-</l01>
--->
+
   <l1>
    <name>background</name>
    <texture>
-    <path>Instruments/Default/Textures/faces-2.rgb</path>
-    <x1>0.5</x1>
-    <y1>0.5</y1>
+    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+    <x1>0.51</x1>
+    <y1>0.51</y1>
     <x2>1.0</x2>
     <y2>1.0</y2>
    </texture>
@@ -99,11 +54,11 @@ properties' values.
     </t1>
    </transformations>
   </l1>
-
+<!-- fix misc.rgb -->
   <l2>
    <name>float</name>
    <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
     <x1>0.46875</x1>
     <y1>0.421875</y1>
     <x2>0.875</x2>
@@ -133,11 +88,11 @@ properties' values.
   <l3>
    <name>rim</name>
    <texture>
-    <path>Instruments/Default/Textures/faces-2.rgb</path>
+    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
     <x1>0</x1>
     <y1>0</y1>
-    <x2>0.5</x2>
-    <y2>0.5</y2>
+    <x2>0.49</x2>
+    <y2>0.49</y2>
    </texture>
    <transformations>
     <t1>
@@ -150,16 +105,143 @@ properties' values.
    </transformations>
   </l3>
 
+
   <l4>
-   <name>front</name>
+   <name>front top</name>
    <texture>
-    <path>Instruments/Default/Textures/faces-2.rgb</path>
+    <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
     <x1>0.5</x1>
-    <y1>0.0</y1>
+    <y1>0.25</y1>
     <x2>1.0</x2>
     <y2>0.5</y2>
    </texture>
-  </l4>
+   <h>64</h>
+    <transformations>
+    <t1>
+     <type>y-shift</type>
+     <offset>32</offset>
+    </t1>
+   </transformations>
+ </l4>
 
+ <l5> 
+  <name>plane</name>
+  <texture>
+   <path>Aircraft/c172/Instruments/Textures/faces-2.rgb</path>
+   <x1>0.5</x1>
+   <y1>0.0</y1>
+   <x2>1.0</x2>
+   <y2>0.25</y2>
+  </texture>
+  <h>64</h>
+  <transformations>
+   <t1>
+    <type>y-shift</type>
+    <offset>-32</offset>
+   </t1>
+   <t2>
+    <type>y-shift</type>
+   <property>/steam/horizon-adjust</property>
+   </t2>
+  </transformations>  
+ </l5>
+ <l6>
+  <name>bezel</name>
+  <texture>
+   <path>Aircraft/X15/Instruments/Textures/bezel.rgb</path>
+   <x1>0.0</x1>
+   <y1>0.0</y1>
+   <x2>0.425</x2>
+   <y2>0.425</y2>
+   <w>200</w>
+   <h>200</h>
+  </texture>
+ </l6>
+ 
+ <l7>
+  <name>adjustment knob</name>
+  <texture>
+   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+   <x1>0.6171875</x1>
+   <y1>0.2421875</y1>
+   <x2>0.7890625</x2>
+   <y2>0.4140625</y2>
+  </texture>
+  <w>24</w>
+  <h>24</h>
+  <transformations>
+   <t1>
+    <type>x-shift</type>
+    <offset>-52</offset>
+   </t1>
+   <t2>
+    <type>y-shift</type>
+    <offset>-52</offset>
+   </t2>
+  </transformations>
+  </l7>
  </layers>
+ <actions>
+  <a1>
+   <name></name>
+   <type>adjust</type>
+   <button>0</button>
+   <x>-64</x>
+   <y>-64</y>
+   <w>13</w>
+   <h>26</h>
+   <property>/steam/horizon-adjust</property>
+   <increment>-0.5</increment>
+   <min>-5</min>
+   <max>5</max>
+   <wrap>false</wrap>
+  </a1>
+  
+  <a2>
+   <name></name>
+   <type>adjust</type>
+   <button>1</button>
+   <x>-64</x>
+   <y>-64</y>
+   <w>13</w>
+   <h>26</h>
+   <property>/steam/horizon-adjust</property>
+   <increment>-5</increment>
+   <min>-5</min>
+   <max>5</max>
+   <wrap>false</wrap>
+  </a2>
+
+  <a3>
+   <name></name>
+   <type>adjust</type>
+   <button>0</button>
+   <x>-51</x>
+   <y>-64</y>
+   <w>13</w>
+   <h>26</h>
+   <property>/steam/horizon-adjust</property>
+   <increment>0.5</increment>
+   <min>-5</min>
+   <max>5</max>
+   <wrap>false</wrap>
+  </a3>
+
+  <a4>
+   <name></name>
+   <type>adjust</type>
+   <button>1</button>
+   <x>-51</x>
+   <y>-64</y>
+   <w>13</w>
+   <h>26</h>
+   <property>/steam/horizon-adjust</property>
+   <increment>5</increment>
+   <min>-5</min>
+   <max>5</max>
+   <wrap>false</wrap>
+ </a4>
+
+</actions>
 </PropertyList>
+

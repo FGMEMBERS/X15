@@ -44,17 +44,15 @@ properties' values.
   
   <l2>
    <name>needle</name>
-   <w>8</w>
-   <h>16</h>
    <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.796875</x1>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
     <y1>0.78125</y1>
-    <x2>0.8359375</x2>
+    <x2>0.8375</x2>
     <y2>1.0</y2>
    </texture>
-   <w>10</w>
-   <h>60</h>
+   <w>8</w>
+   <h>45</h>
    <transformations>
     <t0>
      <type>rotation</type>
@@ -69,9 +67,21 @@ properties' values.
     </t1>
     <t2>
      <type>y-shift</type>
-     <offset>30</offset>
+     <offset>23</offset>
     </t2>
    </transformations>
   </l2>
+  <l3>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>16</w>
+  <h>16</h>
+  </l3>
  </layers>
 </PropertyList>

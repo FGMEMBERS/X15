@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 
 <!--
-Modified airspeed indicator instrument.
-Added a background fill layer to work with shaped panel hack
+X15 airspeed indicator instrument.
 October, 2000 
 John Check <j4strngs@rockfish.net>
-
-Based on Default by David Megginson, david@megginson.com.
+_______________________________________________________________________________
 
 This is an instrument configuration file for the open-source flight
 simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
@@ -27,58 +25,11 @@ properties' values.
 -->
 
 <PropertyList>
-
  <name>Airspeed Indicator</name>
-
  <w>128</w>
  <h>128</h>
 
  <layers>
-
- <l0>
-   <texture>
-   <name>bgr</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>70</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>32</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>48</offset>
-   </t2>
-  </transformations>  
-</l0>
- <l01>
-   <texture>
-   <name>bgl</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>64</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>-32</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>35</offset>
-   </t2>
-  </transformations>  
-</l01>
   <l1>
    <name>face</name>
    <texture>
@@ -89,7 +40,6 @@ properties' values.
     <y2>1.0</y2>
    </texture>
   </l1>
-
   <l2>
    <texture>
     <path>Instruments/Default/Textures/misc-1.rgb</path>
@@ -120,7 +70,18 @@ properties' values.
 
    </transformations>
   </l2>
-
- </layers>
+ <l3>
+ <name>button</name>
+ <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>15</w>
+  <h>15</h>
+  </l3>
+</layers>
 
 </PropertyList>

@@ -43,17 +43,63 @@ properties' values.
   </l1>
   
   <l2>
-   <name>hundreds needle</name>
-   <w>8</w>
-   <h>16</h>
+   <name>ten thousands needle</name>
    <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.796875</x1>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
     <y1>0.78125</y1>
-    <x2>0.8359375</x2>
+    <x2>0.8375</x2>
     <y2>1.0</y2>
    </texture>
-   <w>10</w>
+   <w>8</w>
+   <h>25</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.0036</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>12.50</offset>
+    </t2>
+   </transformations>
+  </l2>
+  <l3>
+   <name>thousands needle</name>
+   <texture>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>8</w>
+   <h>35</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.036</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>17.5</offset>
+    </t2>
+   </transformations>
+  </l3>
+  <l4>
+   <name>hundreds needle</name>
+   <texture>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>8</w>
    <h>56</h>
    <transformations>
     <t1>
@@ -67,33 +113,18 @@ properties' values.
      <offset>24</offset>
     </t2>
    </transformations>
-  </l2>
-
-  <l3>
-   <name>thousands needle</name>
-   <w>8</w>
-   <h>16</h>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.796875</x1>
-    <y1>0.78125</y1>
-    <x2>0.8359375</x2>
-    <y2>1.0</y2>
-   </texture>
-   <w>10</w>
-   <h>30</h>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <property>/position/altitude</property>
-     <max>100000.0</max>
-     <scale>0.036</scale>
-    </t1>
-    <t2>
-     <type>y-shift</type>
-     <offset>15</offset>
-    </t2>
-   </transformations>
-  </l3>
+  </l4>
+ <l5>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>16</w>
+  <h>16</h>
+  </l5>
  </layers>
 </PropertyList>

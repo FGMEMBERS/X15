@@ -44,16 +44,14 @@ properties' values.
   
   <l2>
    <name>a-o-a indicator</name>
-   <w>8</w>
-   <h>16</h>
    <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
     <x1>0.796875</x1>
     <y1>0.78125</y1>
     <x2>0.8359375</x2>
     <y2>1.0</y2>
    </texture>
-   <w>10</w>
+   <w>8</w>
    <h>65</h>
    <transformations>
     <t0>
@@ -82,5 +80,27 @@ properties' values.
     </t20>
    </transformations>
   </l2>
+ <l3>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>16</w>
+  <h>16</h>
+   <transformations>
+    <t0>
+    <type>y-shift</type>
+    <offset>-18</offset>
+    </t0>
+    <t1>
+    <type>x-shift</type>
+    <offset>-32.50</offset>
+    </t1>
+  </transformations>
+ </l3>
  </layers>
 </PropertyList>
