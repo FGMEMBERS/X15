@@ -289,16 +289,6 @@
       GAIN         0.30
     </COMPONENT>
 
-    <COMMENT>
-    <COMPONENT NAME="Elevator Positioning" TYPE="SUMMER">
-      ID           15
-      INPUT         3
-      INPUT        10
-      OUTPUT       FG_ELEVATOR_POS
-      CLIPTO       -0.26 0.61
-    </COMPONENT>
-    </COMMENT>
-
     <COMPONENT NAME="Elevator Positioning" TYPE="SUMMER">
       ID           15
       INPUT         3
@@ -626,14 +616,15 @@
     COEFFICIENTS     ON|OFF
     GROUND_REACTIONS ON|OFF
     FCS              ON|OFF
+    PROPULSION       ON|OFF
 
     NOTE that Time is always output with the data.
   -->
   </COMMENT>
 
   <OUTPUT NAME="JSBout.csv" TYPE="CSV">
-    RATE_IN_HZ       10
-    SIMULATION       OFF
+    RATE_IN_HZ       20
+    SIMULATION       ON
     ATMOSPHERE       OFF
     MASSPROPS        OFF
     AEROSURFACES     ON
@@ -645,6 +636,7 @@
     COEFFICIENTS     ON
     GROUND_REACTIONS ON
     FCS              ON
+    PROPULSION       ON
   </OUTPUT>
 
 </FDM_CONFIG>
