@@ -30,7 +30,7 @@ properties' values.
  <h-base>110</h-base>
  
  <params>
-  <vertical-speed>/steam/vertical-speed-fpm</vertical-speed>
+  <vertical-speed>/steam/vertical-speed-fps</vertical-speed>
  </params> 
 
  <layers>
