@@ -33,26 +33,49 @@ override those by providing <w>..</w> and <h>..</h> properties with the
 
 <PropertyList>
  <name>X-15 Rocket Plane Panel</name>
-  <background>Aircraft/x15/Panels/Textures/x15-bg.rgb</background>
+  <background>Aircraft/X15/Panels/Textures/x15-bg.rgb</background>
   <view-height>520</view-height>
   <w>1024</w>
   <h>404</h>
 
  <instruments>
+  <inertial_climb>
+   <path>Aircraft/X15/Instruments/inertialclimb.xml</path>
+   <x>735</x>
+   <y>230</y>
+  </inertial_climb>
+
   <inertial_height>
    <path>Aircraft/X15/Instruments/inertialheight.xml</path>
    <x>635</x>
-   <y>295</y>
+   <y>280</y>
   </inertial_height>
 
+  <acceleration>
+   <path>Aircraft/X15/Instruments/accel.xml</path>
+   <x>375</x>
+   <y>280</y>
+  </acceleration>
   <aoa>
    <path>Aircraft/X15/Instruments/aoa.xml</path>
    <x>375</x>
    <y>169</y>
   </aoa>
 
+  <altimeter>
+   <path>Aircraft/X15/Instruments/altimeter.xml</path>
+   <x>250</x>
+   <y>139</y>
+  </altimeter>
+
+  <dynamic_press>
+   <path>Aircraft/X15/Instruments/dynamic_press.xml</path>
+   <x>512</x>
+   <y>290</y>
+  </dynamic_press>
+
   <horizon>
-   <path>Aircraft/c172/Instruments/horizon.xml</path>
+   <path>Aircraft/X15/Instruments/horizon.xml</path>
    <x>506</x>
    <y>165</y>
   </horizon>

@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 
 <!--
-Modified altimeter instrument.
-Added a background fill layer to work with shaped panel hack
-October, 2000 
-John Check <j4strngs@rockfish.net>
- 
-Based on Default by David Megginson, david@megginson.com.
+X-15 altimeter.
+October 2000
+John Check
+______________________________________________________________________
 
 This is an instrument configuration file for the open-source flight
 simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
@@ -27,129 +25,34 @@ properties' values.
 -->
 
 <PropertyList>
-
- <name>Altimeter</name>
- <w>128</w>
- <h>128</h>
+ <name>altimeter</name>
+ <w>110</w>
+ <h>110</h>
 
  <layers>
-<!--
- <l0>
-   <texture>
-   <name>bg1</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>82</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>43</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>48</offset>
-   </t2>
-  </transformations>  
-</l0>
- <l01>
-   <texture>
-   <name>bg1</name>
-    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
-    <x1>0.0</x1>
-    <y1>0.0</y1>
-    <x2>0.5</x2>
-    <y2>0.45</y2>
-   </texture>
-   <w>68</w>
-   <h>64</h>
-  <transformations>
-   <t1>
-   <type>x-shift</type>
-   <offset>-32</offset>
-   </t1>
-   <t2>
-   <type>y-shift</type>
-   <offset>48</offset>
-   </t2>
-  </transformations>  
-</l01>
--->
+
   <l1>
-   <name>face</name>
+   <name>background</name>
    <texture>
-    <path>Instruments/Default/Textures/faces-1.rgb</path>
+    <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
     <x1>0.5</x1>
     <y1>0.5</y1>
     <x2>1.0</x2>
     <y2>1.0</y2>
    </texture>
   </l1>
+  
   <l2>
-   <name>long needle (hundreds)</name>
+   <name>ten thousands needle</name>
    <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.796875</x1>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
     <y1>0.78125</y1>
-    <x2>0.8359375</x2>
+    <x2>0.8375</x2>
     <y2>1.0</y2>
-   </texture>
-   <w>10</w>
-   <h>56</h>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <property>/steam/altitude</property>
-     <max>100000.0</max>
-     <scale>0.36</scale>
-    </t1>
-    <t2>
-     <type>y-shift</type>
-     <offset>24.0</offset>
-    </t2>
-   </transformations>
-  </l2>
-
-  <l3>
-   <name>short needle (thousands)</name>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.8359375</x1>
-    <y1>0.859375</y1>
-    <x2>0.8828125</x2>
-    <y2>1.0</y2>
-   </texture>
-   <w>12</w>
-   <h>36</h>
-   <transformations>
-    <t1>
-     <type>rotation</type>
-     <property>/position/altitude</property>
-     <max>100000.0</max>
-     <scale>0.036</scale>
-    </t1>
-    <t2>
-     <type>y-shift</type>
-     <offset>16.0</offset>
-    </t2>
-   </transformations>
-  </l3>
-
-  <l4>
-   <name>bug (ten thousands)</name>
-   <texture>
-    <path>Instruments/Default/Textures/misc-1.rgb</path>
-    <x1>0.84375</x1>
-    <y1>0.8125</y1>
-    <x2>0.875</x2>
-    <y2>0.84375</y2>
    </texture>
    <w>8</w>
-   <h>8</h>
+   <h>25</h>
    <transformations>
     <t1>
      <type>rotation</type>
@@ -159,11 +62,69 @@ properties' values.
     </t1>
     <t2>
      <type>y-shift</type>
-     <offset>60.0</offset>
+     <offset>12.50</offset>
+    </t2>
+   </transformations>
+  </l2>
+  <l3>
+   <name>thousands needle</name>
+   <texture>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>8</w>
+   <h>35</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.036</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>17.5</offset>
+    </t2>
+   </transformations>
+  </l3>
+  <l4>
+   <name>hundreds needle</name>
+   <texture>
+    <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+    <x1>0.8</x1>
+    <y1>0.78125</y1>
+    <x2>0.8375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>8</w>
+   <h>56</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.36</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>24</offset>
     </t2>
    </transformations>
   </l4>
-
+ <l5>
+  <name>button</name>
+  <texture>
+  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <x1>0.6171875</x1>
+  <y1>0.2421875</y1>
+  <x2>0.7890625</x2>
+  <y2>0.4140625</y2>
+  </texture>
+  <w>16</w>
+  <h>16</h>
+  </l5>
  </layers>
-
 </PropertyList>
