@@ -2,7 +2,7 @@
 <PropertyList>
   <name>button</name>
   <texture>
-  <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
+  <path>Aircraft/Instruments/Textures/misc-1.rgb</path>
   <x1>0.6171875</x1>
   <y1>0.2421875</y1>
   <x2>0.7890625</x2>
