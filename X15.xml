@@ -1,16 +1,16 @@
-<FDM_CONFIG NAME="X-15" VERSION="1.36">
+<FDM_CONFIG NAME="X-15" VERSION="1.38">
 
   <METRICS>
 
     <COMMENT>
-
+    <!--
     Center of gravity location, empty weight, in aircraft's own structural coord
     system. X, Y, Z, in inches; X is positive out the tail, Y positive out the
     right wing.
 
     Pilot's eyepoint location, in aircraft's own coord system, FROM cg.
     X, Y, Z, in inches
-
+    -->
     </COMMENT>
 
     AC_WINGAREA 200
@@ -30,7 +30,7 @@
   <UNDERCARRIAGE>
 
     <COMMENT>
-
+    <!--
     The gear parameters that can be specified are as follows, IN ORDER OF APPEARANCE:
     
     AC_GEAR
@@ -40,44 +40,89 @@
     <damping coefficient>            damping coefficient in lbs/ft/sec
     <dynamic friction coefficient>   Self-explanatory: sliding friction coefficient
     <static friction coefficient>    Self-explanatory: "onset" friction coefficient
+    <rolling resistance coefficient> Self-explanatory: rolling resistance coefficient
     <steerability attribute>         One of <STEERABLE | FIXED | CASTERED>
     <brake group membership>         One of <LEFT | CENTER | RIGHT | NOSE | TAIL | NONE>
     <max steer angle>                Maximum steerable angle in degrees
-
+    -->
     </COMMENT>
 
-    AC_GEAR     NOSE        63.0   0.0 -48.0 15000  1000  0.02 0.5 FIXED NONE 0
-    AC_GEAR     LEFT_SKID  540.6 -56.8 -76.6 15000  1000  0.2  0.9 FIXED NONE 0
-    AC_GEAR     RIGHT_SKID 540.6  56.8 -76.6 15000  1000  0.2  0.9 FIXED NONE 0
+    AC_GEAR     NOSE        63.0   0.0 -48.0 15000  1000  0.02 0.5 0.02 FIXED NONE 0
+    AC_GEAR     LEFT_SKID  540.6 -56.8 -76.6 15000  1000  0.2  0.9 0.00 FIXED NONE 0
+    AC_GEAR     RIGHT_SKID 540.6  56.8 -76.6 15000  1000  0.2  0.9 0.00 FIXED NONE 0
 
   </UNDERCARRIAGE>
 
   <PROPULSION>
 
     <COMMENT>
+    <!--
+      TANKS SECTION
 
-    Tank locations and characteristics, empty weight, in aircraft's own coord system:
-    * X, Y, Z, in inches
-    * effective radius of tank, in inches (for fuel slosh, if/when modeled)
-    * capacity in pounds
-    * current contents, in pounds
+      Tank locations and characteristics, empty weight, in aircraft's own coord system:
+      X, Y, Z, in inches
+      effective radius of tank, in inches (for fuel slosh, if/when modeled)
+      capacity in pounds
+      Current contents, in pounds
 
+      ENGINE[S] SECTION
+
+      Engine[s] is|are specified by giving engine name (which corresponds to an engine
+      definition file in the "engines" directory) followed by x, y, z placement and
+      pitch and yaw orientation. Coordinates are given in inches in the structural
+      coordinate frame. Angles for pitch and yaw are specified in radians.
+
+      AC_ENGINE name x y z pitch yaw
+
+      THRUSTER[S] SECTION
+
+      AC_THRUSTER name x y z pitch yaw
+    -->
     </COMMENT>
 
-    AC_TANK OXIDIZER 282.3 0.0 0.0 26.0 9470.0 9470.0
-    AC_TANK FUEL     408.3 0.0 0.0 26.0 8236.0 8236.0
+    <AC_TANK TYPE="OXIDIZER" NUMBER="0">
+      XLOC 282.3
+      YLOC 0.0
+      ZLOC 0.0
+      RADIUS 26.0
+      CAPACITY 9470.0
+      CONTENTS 9470.0
+    </AC_TANK>
 
-    AC_ENGINE XLR99
+    <AC_TANK TYPE="FUEL" NUMBER="1">
+      XLOC 408.3
+      YLOC 0.0
+      ZLOC 0.0
+      RADIUS 26.0
+      CAPACITY 8236.0
+      CONTENTS 8236.0
+    </AC_TANK>
 
+    <AC_ENGINE FILE="XLR99">
+      XLOC 600.0
+      YLOC   0.0
+      ZLOC   0.0
+      PITCH  0.0
+      YAW    0.0
+      FEED     0
+      FEED     1
+    </AC_ENGINE>
+
+    <AC_THRUSTER FILE="xlr99_nozzle">
+      XLOC  600.0
+      YLOC    0.0
+      ZLOC    0.0
+      PITCH   0.0
+      YAW     0.0
+    </AC_THRUSTER>
   </PROPULSION>
 
   <COMMENT>
-
+  <!--
   In the following section for flight controls the TYPE parameter may be one of
   the following:
 
     LAG_FILTER
-    RECT_LAG_FILTER
     LEAD_LAG_FILTER
     SECOND_ORDER_FILTER
     WASHOUT_FILTER
@@ -113,7 +158,7 @@
 
   The MAX and MIN pilot input forces in AEROSURFACE_SCALE types below are given in
   pounds.
-
+  -->
   </COMMENT>
 
   <FLIGHT_CONTROL NAME="X-15 SAS">
@@ -139,10 +184,12 @@
     </COMPONENT>
 
     <COMMENT>
+    <!--
       In the following component, the GAIN value is actually in addition to the
       scheduled gain in the next component. If the GAIN in a scheduled component
       is not required, it may be ignored and not specified here - it is initialized
       to one in the contructor.
+    -->
     </COMMENT>
 
     <COMPONENT NAME="Pitch Scheduled Gain 1" TYPE="SCHEDULED_GAIN">
@@ -242,6 +289,7 @@
       GAIN         0.30
     </COMPONENT>
 
+    <COMMENT>
     <COMPONENT NAME="Elevator Positioning" TYPE="SUMMER">
       ID           15
       INPUT         3
@@ -249,9 +297,24 @@
       OUTPUT       FG_ELEVATOR_POS
       CLIPTO       -0.26 0.61
     </COMPONENT>
+    </COMMENT>
+
+    <COMPONENT NAME="Elevator Positioning" TYPE="SUMMER">
+      ID           15
+      INPUT         3
+      INPUT        10
+      CLIPTO       -0.26 0.61
+    </COMPONENT>
+
+    <COMPONENT NAME="Elevator Filter" TYPE="LAG_FILTER">
+      ID           16
+      INPUT        15
+      C1           600
+      OUTPUT       FG_ELEVATOR_POS
+    </COMPONENT>
 
     <COMPONENT NAME="Aileron Positioning" TYPE="SUMMER">
-      ID           16
+      ID           17
       INPUT         6
       INPUT        13
       OUTPUT       FG_AILERON_POS
@@ -259,7 +322,7 @@
     </COMPONENT>
 
     <COMPONENT NAME="Rudder Positioning" TYPE="SUMMER">
-      ID           17
+      ID           18
       INPUT         9
       INPUT        14
       OUTPUT       FG_RUDDER_POS
@@ -271,10 +334,8 @@
   <AERODYNAMICS>
 
     <COMMENT>
-
+    <!--
     For Multiplier parameter identifiers, see the definition for enum eParam in FGDefs.h
-
-
 
     The aerodynamics section is arranged as follows:
 
@@ -325,7 +386,7 @@
            </COEFFICIENT>
 
          </AXIS>
-
+    -->
     </COMMENT>
 
     <AXIS NAME="LIFT">
@@ -424,6 +485,7 @@
       </COEFFICIENT>
 
       <COEFFICIENT NAME="Clr" TYPE="VALUE">
+
         Roll_moment_due_to_yaw_rate
         FG_QBAR|FG_WINGAREA|FG_WINGSPAN|FG_BI2VEL|FG_YAWRATE
         0.04
@@ -524,7 +586,7 @@
   </AERODYNAMICS>
 
   <COMMENT>
-
+  <!--
     OUTPUT section definition
 
     The following specifies the way that JSBSim writes out data.
@@ -566,11 +628,11 @@
     FCS              ON|OFF
 
     NOTE that Time is always output with the data.
-
+  -->
   </COMMENT>
 
   <OUTPUT NAME="JSBout.csv" TYPE="CSV">
-    RATE_IN_HZ       60
+    RATE_IN_HZ       10
     SIMULATION       OFF
     ATMOSPHERE       OFF
     MASSPROPS        OFF
@@ -586,4 +648,3 @@
   </OUTPUT>
 
 </FDM_CONFIG>
-
