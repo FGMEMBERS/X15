@@ -60,7 +60,7 @@ properties' values.
     </t0>
     <t1>
      <type>rotation</type>
-     <property>/velocities/airspeed</property>
+     <property>/velocities/airspeed-kt</property>
      <min>0.0</min>
      <max>7500.0</max>
      <scale>0.045</scale>

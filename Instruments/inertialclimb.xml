@@ -60,7 +60,7 @@ properties' values.
     </t1>
     <t2>
      <type>rotation</type>
-     <property>/steam/vertical-speed</property>
+     <property>/steam/vertical-speed-fpm</property>
      <min>-1000.0</min>
      <max>1000.0</max>
      <scale>0.00835</scale>

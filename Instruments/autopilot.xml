@@ -82,7 +82,7 @@ properties' values.
   <l3>
    <name>NAV button</name>
    <type>switch</type>
-   <property>/autopilot/locks/nav1</property>
+   <property>/autopilot/locks/nav[0]</property>
    <layer1>
     <name>NAV on</name>
     <texture>
@@ -163,7 +163,7 @@ properties' values.
   <a2>
    <name>toggle nav1 lock</name>
    <type>toggle</type>
-   <property>/autopilot/locks/nav1</property>
+   <property>/autopilot/locks/nav[0]</property>
    <button>0</button>
    <x>-48</x>
    <y>-8</y>

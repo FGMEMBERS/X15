@@ -58,7 +58,7 @@ properties' values.
     </t0>
     <t1>
      <type>rotation</type>
-     <property>/orientation/roll</property>
+     <property>/orientation/roll-deg</property>
      <min>-100.0</min>
      <max>100.0</max>
      <scale>1.0</scale>

@@ -56,7 +56,7 @@ properties' values.
    <transformations>
     <t1>
      <type>rotation</type>
-     <property>/position/altitude</property>
+     <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.0036</scale>
     </t1>
@@ -80,7 +80,7 @@ properties' values.
    <transformations>
     <t1>
      <type>rotation</type>
-     <property>/position/altitude</property>
+     <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.036</scale>
     </t1>
@@ -104,7 +104,7 @@ properties' values.
    <transformations>
     <t1>
      <type>rotation</type>
-     <property>/position/altitude</property>
+     <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.36</scale>
     </t1>

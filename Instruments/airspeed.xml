@@ -56,7 +56,7 @@ properties' values.
 
      <t1>
       <type>rotation</type>
-      <property>/steam/airspeed</property>
+      <property>/steam/airspeed-kt</property>
       <min>30.0</min>
       <max>220.0</max>
       <scale>1.8</scale>

@@ -89,7 +89,7 @@ properties' values.
    <transformations>
     <t1>
      <type>rotation</type>
-     <property>/radios/nav1/radials/selected</property>
+     <property>/radios/nav[0]/radials/selected-deg</property>
      <min>0.0</min>
      <max>360.0</max>
      <scale>-1.0</scale>
@@ -130,7 +130,7 @@ properties' values.
     </t2>
     <t3>
      <type>rotation</type>
-     <property>/radios/nav1/radials/selected</property>
+     <property>/radios/nav[0]/radials/selected-deg</property>
      <min>0</min>
      <max>360</max>
     </t3>
@@ -139,7 +139,7 @@ properties' values.
   <l4>
    <name>TO/FROM/OFF flag</name>
    <type>switch</type>
-   <property>/radios/nav1/to-flag</property>
+   <property>/radios/nav[0]/to-flag</property>
    <layer1>
     <name>TO flag</name>
     <texture>
@@ -155,7 +155,7 @@ properties' values.
    <layer2>
     <name>FROM/OFF flag</name>
     <type>switch</type>
-    <property>/radios/nav1/from-flag</property>
+    <property>/radios/nav[0]/from-flag</property>
     <layer1>
      <name>FROM flag</name>
      <texture>
@@ -202,7 +202,7 @@ properties' values.
    <transformations>
     <t1>
      <type>x-shift</type>
-     <property>/radios/nav1/heading-needle-deflection</property>
+     <property>/radios/nav[0]/heading-needle-deflection</property>
      <min>-10.0</min>
      <max>10.0</max>
      <scale>3.2</scale>
@@ -223,7 +223,7 @@ properties' values.
    <transformations>
     <t1>
      <type>y-shift</type>
-     <property>/radios/nav1/gs-needle-deflection</property>
+     <property>/radios/nav[0]/gs-needle-deflection</property>
      <min>-1</min>
      <max>1</max>
      <scale>25.6</scale>
@@ -245,7 +245,7 @@ properties' values.
    <y>-64</y>
    <w>13</w>
    <h>26</h>
-   <property>/radios/nav1/radials/selected</property>
+   <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>-1.0</increment>
    <min>0</min>
    <max>360</max>
@@ -259,7 +259,7 @@ properties' values.
    <y>-64</y>
    <w>13</w>
    <h>26</h>
-   <property>/radios/nav1/radials/selected</property>
+   <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>-5.0</increment>
    <min>0</min>
    <max>360</max>
@@ -273,7 +273,7 @@ properties' values.
    <y>-64</y>
    <w>13</w>
    <h>26</h>
-   <property>/radios/nav1/radials/selected</property>
+   <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>1.0</increment>
    <min>0</min>
    <max>360</max>
@@ -287,7 +287,7 @@ properties' values.
    <y>-64</y>
    <w>13</w>
    <h>26</h>
-   <property>/radios/nav1/radials/selected</property>
+   <property>/radios/nav[0]/radials/selected-deg</property>
    <increment>5.0</increment>
    <min>0</min>
    <max>360</max>

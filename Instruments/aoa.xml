@@ -68,7 +68,7 @@ properties' values.
     </t2>
     <t10>
      <type>rotation</type>
-     <property>/orientation/pitch</property>
+     <property>/orientation/pitch-deg</property>
      <min>-10.0</min>
      <max>40.0</max>
      <scale>-2.0</scale>
