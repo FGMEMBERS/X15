@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+
+<!--
+Modified throttle knob.
+Uses 3D rendered texture and slight geometry mods.
+October 2000
+John Check, <j4strngs@rockfish.net>
+____________________________________________________________________
+Based on Default by David Megginson, david@megginson.com.
+
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's layers and actions.
+
+Each instrument is composed of layers stacked on top of each other.
+A layer may be a texture (with transparent parts to show the layers
+underneath), text, or a special layer that switches between two
+others (say, to turn an indicator light on or off).  Each layer can
+move independently in proportion to a property value, and text
+can be generated from property values as well: all of the layer's
+movements are defined as transformations.
+
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swaping them with other
+properties' values.
+-->
+
+<PropertyList>
+
+ <name>Throttle Knob</name>
+ <w>64</w>
+ <h>72</h>
+
+ <layers>
+  <l1>
+   <name>background</name>
+    <texture>
+    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <x1>0.625</x1>
+    <y1>0.2275</y1>
+    <x2>0.8</x2>
+    <y2>0.415</y2>
+   </texture>
+   <w>64</w>
+   <h>64</h>
+  </l1>   
+  <l2>
+   <name>shaft</name>
+   <texture>
+    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <x1>0.890625</x1>
+    <y1>0.8125</y1>
+    <x2>0.921875</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>16</w>
+   <h>24</h>
+   <transformations>
+    <t1>
+     <type>x-shift</type>
+     <offset>-5</offset>
+    </t1>
+   </transformations>
+  </l2>
+  <l3>
+   <name>knob</name>
+   <texture>
+    <path>Panels/Custom/Textures/knobs.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.5</x2>
+    <y2>0.5</y2>
+   </texture>
+   <w>64</w>
+   <h>64</h>
+   <transformations>
+    <t1>
+     <type>x-shift</type>
+     <offset>0</offset>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <property>/controls/throttle</property>
+     <min>0.0</min>
+     <max>1.0</max>
+     <scale>18</scale>
+     <offset>-20</offset>
+    </t2>
+   </transformations>
+  </l3>
+ </layers>
+
+ <actions>
+
+  <a1>
+   <name>small decrease</name>
+   <type>adjust</type>
+   <button>0</button>
+   <x>-32</x>
+   <y>-36</y>
+   <w>32</w>
+   <h>72</h>
+   <property>/controls/throttle</property>
+   <increment>-0.01</increment>
+   <min>0</min>
+   <max>1.0</max>
+   <wrap>false</wrap>
+  </a1>
+
+  <a2>
+   <name>small increase</name>
+   <type>adjust</type>
+   <button>0</button>
+   <x>0</x>
+   <y>-36</y>
+   <w>32</w>
+   <h>72</h>
+   <property>/controls/throttle</property>
+   <increment>0.01</increment>
+   <min>0</min>
+   <max>1.0</max>
+   <wrap>false</wrap>
+  </a2>
+
+  <a3>
+   <name>big decrease</name>
+   <type>adjust</type>
+   <button>1</button>
+   <x>-32</x>
+   <y>-36</y>
+   <w>32</w>
+   <h>72</h>
+   <property>/controls/throttle</property>
+   <increment>-0.1</increment>
+   <min>0</min>
+   <max>1.0</max>
+   <wrap>false</wrap>
+  </a3>
+
+  <a4>
+   <name>big increase</name>
+   <type>adjust</type>
+   <button>1</button>
+   <x>0</x>
+   <y>-36</y>
+   <w>32</w>
+   <h>72</h>
+   <property>/controls/throttle</property>
+   <increment>0.1</increment>
+   <min>0</min>
+   <max>1.0</max>
+   <wrap>false</wrap>
+  </a4>
+
+ </actions>
+
+</PropertyList>

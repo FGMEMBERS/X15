@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+3 color capable LED brake indicator, left side
+restricted to 2 color to cut down on confusion
+October 2000, 
+John Check <j4strngs@usa.net>
+
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's layers and actions.
+ 
+Each instrument is composed of layers stacked on top of each other.
+A layer may be a texture (with transparent parts to show the layers
+underneath), text, or a special layer that switches between two
+others (say, to turn an indicator light on or off).  Each layer can
+move independently in proportion to a property value, and text
+can be generated from property values as well: all of the layer's
+movements are defined as transformations.
+ 
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swapping them with other
+properties' values.
+
+-->
+
+<PropertyList>
+ <name>Brake</name>
+ <w>32</w>
+ <h>32</h>
+
+ <layers>
+  <l1>
+   <name>background</name>
+   <texture>
+    <path>Panels/Custom/Textures/led.rgb</path>
+    <x1>0.25</x1>
+    <y1>0.75</y1>
+    <x2>0.5</x2>
+    <y2>1.0</y2>
+   </texture>
+  </l1>
+
+  <l2>
+   <name>Brake light</name>
+   <type>switch</type>
+   <property>/controls/brakes/left</property>
+    <layer1>
+     <name>left / all brake</name>
+     <type>switch</type>
+     <property>/controls/brakes/all</property>
+      <layer1>
+       <name>left brake</name>
+       <texture>
+       <path>Panels/Custom/Textures/led.rgb</path>
+       <x1>0.0</x1>
+       <y1>0.0</y1>
+       <x2>0.25</x2>
+       <y2>0.25</y2>
+       </texture>
+       <w>32</w>
+       <h>32</h>
+      </layer1>
+      <layer2>
+       <name>all brakes</name>
+       <texture>
+       <path>Panels/Custom/Textures/led.rgb</path>
+       <x1>0.5</x1>
+       <y1>0.0</y1>
+       <x2>0.75</x2>
+       <y2>0.25</y2>
+       </texture>
+       <w>32</w>
+       <h>32</h>
+      </layer2>
+    </layer1>
+    <layer2>
+     <name>no brake</name>
+     <texture>
+     <path>Panels/Custom/Textures/led.rgb</path>
+     <x1>0.25</x1>
+     <y1>0.0</y1>
+     <x2>0.5</x2>
+     <y2>0.25</y2>
+     </texture>
+     <w>32</w>
+     <h>32</h>
+    </layer2>
+  </l2>
+
+  <l3>
+   <name>bezel</name>
+   <texture>
+   <path>Panels/Custom/Textures/led.rgb</path>
+   <x1>0.0</x1>
+   <y1>0.75</y1>
+   <x2>0.25</x2>
+   <y2>1.0</y2>
+   </texture>
+  </l3>
+ 
+ </layers>
+</PropertyList>

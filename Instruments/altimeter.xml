@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<!--
+Modified altimeter instrument.
+Added a background fill layer to work with shaped panel hack
+October, 2000 
+John Check <j4strngs@rockfish.net>
+ 
+Based on Default by David Megginson, david@megginson.com.
+
+This is an instrument configuration file for the open-source flight
+simulator FlightGear (www.flightgear.org).  The file is an XML-encoded
+FlightGear property list defining the instrument's layers and actions.
+
+Each instrument is composed of layers stacked on top of each other.
+A layer may be a texture (with transparent parts to show the layers
+underneath), text, or a special layer that switches between two
+others (say, to turn an indicator light on or off).  Each layer can
+move independently in proportion to a property value, and text
+can be generated from property values as well: all of the layer's
+movements are defined as transformations.
+
+Actions are hotspots on the instrument that will respond to a mouse
+click.  Actions always modify the values of properties, either by
+adjusting them, toggling them, or swaping them with other
+properties' values.
+-->
+
+<PropertyList>
+
+ <name>Altimeter</name>
+ <w>128</w>
+ <h>128</h>
+
+ <layers>
+<!--
+ <l0>
+   <texture>
+   <name>bg1</name>
+    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.5</x2>
+    <y2>0.45</y2>
+   </texture>
+   <w>82</w>
+   <h>64</h>
+  <transformations>
+   <t1>
+   <type>x-shift</type>
+   <offset>43</offset>
+   </t1>
+   <t2>
+   <type>y-shift</type>
+   <offset>48</offset>
+   </t2>
+  </transformations>  
+</l0>
+ <l01>
+   <texture>
+   <name>bg1</name>
+    <path>Panels/Custom/Textures/dplatetrim.rgb</path>
+    <x1>0.0</x1>
+    <y1>0.0</y1>
+    <x2>0.5</x2>
+    <y2>0.45</y2>
+   </texture>
+   <w>68</w>
+   <h>64</h>
+  <transformations>
+   <t1>
+   <type>x-shift</type>
+   <offset>-32</offset>
+   </t1>
+   <t2>
+   <type>y-shift</type>
+   <offset>48</offset>
+   </t2>
+  </transformations>  
+</l01>
+-->
+  <l1>
+   <name>face</name>
+   <texture>
+    <path>Instruments/Default/Textures/faces-1.rgb</path>
+    <x1>0.5</x1>
+    <y1>0.5</y1>
+    <x2>1.0</x2>
+    <y2>1.0</y2>
+   </texture>
+  </l1>
+  <l2>
+   <name>long needle (hundreds)</name>
+   <texture>
+    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <x1>0.796875</x1>
+    <y1>0.78125</y1>
+    <x2>0.8359375</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>10</w>
+   <h>56</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/steam/altitude</property>
+     <max>100000.0</max>
+     <scale>0.36</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>24.0</offset>
+    </t2>
+   </transformations>
+  </l2>
+
+  <l3>
+   <name>short needle (thousands)</name>
+   <texture>
+    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <x1>0.8359375</x1>
+    <y1>0.859375</y1>
+    <x2>0.8828125</x2>
+    <y2>1.0</y2>
+   </texture>
+   <w>12</w>
+   <h>36</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.036</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>16.0</offset>
+    </t2>
+   </transformations>
+  </l3>
+
+  <l4>
+   <name>bug (ten thousands)</name>
+   <texture>
+    <path>Instruments/Default/Textures/misc-1.rgb</path>
+    <x1>0.84375</x1>
+    <y1>0.8125</y1>
+    <x2>0.875</x2>
+    <y2>0.84375</y2>
+   </texture>
+   <w>8</w>
+   <h>8</h>
+   <transformations>
+    <t1>
+     <type>rotation</type>
+     <property>/position/altitude</property>
+     <max>100000.0</max>
+     <scale>0.0036</scale>
+    </t1>
+    <t2>
+     <type>y-shift</type>
+     <offset>60.0</offset>
+    </t2>
+   </transformations>
+  </l4>
+
+ </layers>
+
+</PropertyList>
