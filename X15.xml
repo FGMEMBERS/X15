@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="X-15" VERSION="1.30">
+<FDM_CONFIG NAME="X-15" VERSION="1.36">
 
   <METRICS>
 
@@ -29,9 +29,26 @@
 
   <UNDERCARRIAGE>
 
-    AC_GEAR     NOSE        63.0   0.0 -48.0 15000  1000  0.02 0
-    AC_GEAR     LEFT_SKID  540.6 -56.8 -76.6 15000  1000  0.2  0
-    AC_GEAR     RIGHT_SKID 540.6  56.8 -76.6 15000  1000  0.2  0
+    <COMMENT>
+
+    The gear parameters that can be specified are as follows, IN ORDER OF APPEARANCE:
+    
+    AC_GEAR
+    <name>                           name of gear entry - no spaces allowed
+    <X> <Y> <Z>                      Gear location in aircraft body coords in inches
+    <spring constant>                spring constant in lbs/ft
+    <damping coefficient>            damping coefficient in lbs/ft/sec
+    <dynamic friction coefficient>   Self-explanatory: sliding friction coefficient
+    <static friction coefficient>    Self-explanatory: "onset" friction coefficient
+    <steerability attribute>         One of <STEERABLE | FIXED | CASTERED>
+    <brake group membership>         One of <LEFT | CENTER | RIGHT | NOSE | TAIL | NONE>
+    <max steer angle>                Maximum steerable angle in degrees
+
+    </COMMENT>
+
+    AC_GEAR     NOSE        63.0   0.0 -48.0 15000  1000  0.02 0.5 FIXED NONE 0
+    AC_GEAR     LEFT_SKID  540.6 -56.8 -76.6 15000  1000  0.2  0.9 FIXED NONE 0
+    AC_GEAR     RIGHT_SKID 540.6  56.8 -76.6 15000  1000  0.2  0.9 FIXED NONE 0
 
   </UNDERCARRIAGE>
 
@@ -40,18 +57,15 @@
     <COMMENT>
 
     Tank locations and characteristics, empty weight, in aircraft's own coord system:
-    X, Y, Z, in inches
-    effective radius of tank, in inches (for fuel slosh, if/when modeled)
-    capacity in pounds
-    current contents, in pounds
-
-    AC_TANK OXIDIZER 282.3 0.0 0.0 26.0 9470.0 9470.0
-    AC_TANK FUEL     408.3 0.0 0.0 26.0 8236.0 8236.0
+    * X, Y, Z, in inches
+    * effective radius of tank, in inches (for fuel slosh, if/when modeled)
+    * capacity in pounds
+    * current contents, in pounds
 
     </COMMENT>
 
-    AC_TANK OXIDIZER 282.3 0.0 0.0 26.0 9470.0 0.0
-    AC_TANK FUEL     408.3 0.0 0.0 26.0 8236.0 0.0
+    AC_TANK OXIDIZER 282.3 0.0 0.0 26.0 9470.0 9470.0
+    AC_TANK FUEL     408.3 0.0 0.0 26.0 8236.0 8236.0
 
     AC_ENGINE XLR99
 
@@ -239,39 +253,9 @@
 
     <COMMENT>
 
-    Multiplier parameter identifiers
+    For Multiplier parameter identifiers, see the definition for enum eParam in FGDefs.h
 
-    FG_QBAR           1
-    FG_WINGAREA       2
-    FG_WINGSPAN       4
-    FG_CBAR           8
-    FG_ALPHA          16
-    FG_ALPHADOT       32
-    FG_BETA           64
-    FG_BETADOT        128
-    FG_PITCHRATE      256
-    FG_ROLLRATE       512
-    FG_YAWRATE        1024
-    FG_MACH           2048
-    FG_ALTITUDE       4096
-    FG_BI2VEL         8192
-    FG_CI2VEL         16384
-    FG_ELEVATOR_POS   32768L
-    FG_AILERON_POS    65536L
-    FG_RUDDER_POS     131072L
-    FG_SPDBRAKE_POS   262144L
-    FG_SPOILERS_POS   524288L
-    FG_FLAPS_POS      1048576L
-    FG_ELEVATOR_CMD   2097152L
-    FG_AILERON_CMD    4194304L
-    FG_RUDDER_CMD     8388608L
-    FG_SPDBRAKE_CMD   16777216L
-    FG_SPOILERS_CMD   33554432L
-    FG_FLAPS_CMD      67108864L
-    FG_SPARE3         134217728L
-    FG_SPARE4         268435456L
-    FG_SPARE5         536870912L
-    FG_SPARE6         1073741824L
+
 
     The aerodynamics section is arranged as follows:
 
