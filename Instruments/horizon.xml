@@ -192,7 +192,7 @@ properties' values.
   <binding>
   <command>property-adjust</command>
   <property>/steam/horizon-adjust</property>
-   <increment>-0.5</increment>
+   <step>-0.5</step>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
@@ -209,7 +209,7 @@ properties' values.
   <binding>
   <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
-   <increment>-5</increment>
+   <step>-5</step>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
@@ -226,7 +226,7 @@ properties' values.
   <binding>
   <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
-   <increment>0.5</increment>
+   <step>0.5</step>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>
@@ -243,7 +243,7 @@ properties' values.
   <binding>
   <command>property-adjust</command>
    <property>/steam/horizon-adjust</property>
-   <increment>5</increment>
+   <step>5</step>
    <min>-5</min>
    <max>5</max>
    <wrap>false</wrap>

@@ -247,7 +247,7 @@ properties' values.
    <binding>
    <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
-   <increment>-1.0</increment>
+   <step>-1.0</step>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
@@ -263,7 +263,7 @@ properties' values.
    <binding>
    <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
-   <increment>-5.0</increment>
+   <step>-5.0</step>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
@@ -278,7 +278,7 @@ properties' values.
    <binding>
    <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
-   <increment>1.0</increment>
+   <step>1.0</step>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
@@ -294,7 +294,7 @@ properties' values.
    <binding>
    <command>property-adjust</command>
    <property>/radios/nav[0]/radials/selected-deg</property>
-   <increment>5.0</increment>
+   <step>5.0</step>
    <min>0</min>
    <max>360</max>
    <wrap>1</wrap>
