@@ -57,7 +57,7 @@ properties' values.
     </t1>
     <t2>
      <type>rotation</type>
-     <property>/controls/flaps</property>
+     <property>/controls/flight/flaps</property>
      <max>1.0</max>
      <scale>120.0</scale>
      <offset>30</offset>
