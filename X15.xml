@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="X-15" VERSION="1.60">
+<FDM_CONFIG NAME="X-15" VERSION="1.61">
   <!--
 
   File:        X15.xml
@@ -40,6 +40,7 @@
     AC_CGLOC    345.0  0.0    0.0
     AC_EYEPTLOC 115.9  0.0   26.0
     AC_AERORP   345.4  0.0    0.0
+    AC_VRP      342.82 0.0    0.0
 
   </METRICS>
 
