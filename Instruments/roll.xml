@@ -26,11 +26,11 @@ properties' values.
 
 <PropertyList>
  <name>roll indicator</name>
- <w>125</w>
- <h>90</h>
+ <w-base>125</w-base>
+ <h-base>90</h-base>
 
  <layers>
-  <l1>
+  <layer>
    <name>background</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
@@ -39,8 +39,8 @@ properties' values.
     <x2>1.0</x2>
     <y2>0.5</y2>
    </texture>
-  </l1>
-  <l2>
+  </layer>
+  <layer>
    <name>needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -52,25 +52,25 @@ properties' values.
    <w>8</w>
    <h>60</h>
    <transformations>
-    <t0>
+    <transformation>
     <type>y-shift</type>
     <offset>-30</offset>
-    </t0>
-    <t1>
+    </transformation>
+    <transformation>
      <type>rotation</type>
      <property>/orientation/roll-deg</property>
      <min>-100.0</min>
      <max>100.0</max>
      <scale>1.0</scale>
     <wrap>false</wrap>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>30</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l2>
-  <l3>
+  </layer>
+  <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -82,11 +82,11 @@ properties' values.
   <w>16</w>
   <h>16</h>
    <transformations>
-    <t0>
+    <transformation>
     <type>y-shift</type>
     <offset>-30</offset>
-    </t0>
+    </transformation>
    </transformations>
-  </l3>
+  </layer>
  </layers>
 </PropertyList>

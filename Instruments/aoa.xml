@@ -26,12 +26,12 @@ properties' values.
 
 <PropertyList>
  <name>angle of attack indicator</name>
- <w>125</w>
- <h>125</h>
+ <w-base>125</w-base>
+ <h-base>125</h-base>
 
  <layers>
 
-  <l1>
+  <layer>
    <name>background</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
@@ -40,9 +40,9 @@ properties' values.
     <x2>0.5</x2>
     <y2>1.0</y2>
    </texture>
-  </l1>
+  </layer>
   
-  <l2>
+  <layer>
    <name>a-o-a indicator</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -54,33 +54,33 @@ properties' values.
    <w>8</w>
    <h>65</h>
    <transformations>
-    <t0>
+    <transformation>
     <type>y-shift</type>
     <offset>-18</offset>
-    </t0>
-    <t1>
+    </transformation>
+    <transformation>
     <type>x-shift</type>
     <offset>-32.50</offset>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
     <type>rotation</type>
     <offset>90</offset>
-    </t2>
-    <t10>
+    </transformation>
+    <transformation>
      <type>rotation</type>
      <property>/orientation/pitch-deg</property>
      <min>-10.0</min>
      <max>40.0</max>
      <scale>-2.0</scale>
     <wrap>false</wrap>
-    </t10>
-    <t20>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>32.50</offset>
-    </t20>
+    </transformation>
    </transformations>
-  </l2>
- <l3>
+  </layer>
+ <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -92,15 +92,15 @@ properties' values.
   <w>16</w>
   <h>16</h>
    <transformations>
-    <t0>
+    <transformation>
     <type>y-shift</type>
     <offset>-18</offset>
-    </t0>
-    <t1>
+    </transformation>
+    <transformation>
     <type>x-shift</type>
     <offset>-32.50</offset>
-    </t1>
+    </transformation>
   </transformations>
- </l3>
+ </layer>
  </layers>
 </PropertyList>

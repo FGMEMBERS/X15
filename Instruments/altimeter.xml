@@ -26,12 +26,12 @@ properties' values.
 
 <PropertyList>
  <name>altimeter</name>
- <w>110</w>
- <h>110</h>
+ <w-base>110</w-base>
+ <h-base>110</h-base>
 
  <layers>
 
-  <l1>
+  <layer>
    <name>background</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
@@ -40,9 +40,9 @@ properties' values.
     <x2>1.0</x2>
     <y2>1.0</y2>
    </texture>
-  </l1>
+  </layer>
   
-  <l2>
+  <layer>
    <name>ten thousands needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -54,19 +54,20 @@ properties' values.
    <w>8</w>
    <h>25</h>
    <transformations>
-    <t1>
+    <transformation>
      <type>rotation</type>
      <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.0036</scale>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>12.50</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l2>
-  <l3>
+  </layer>
+  
+  <layer>
    <name>thousands needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -78,19 +79,19 @@ properties' values.
    <w>8</w>
    <h>35</h>
    <transformations>
-    <t1>
+    <transformation>
      <type>rotation</type>
      <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.036</scale>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>17.5</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l3>
-  <l4>
+  </layer>
+  <layer>
    <name>hundreds needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -102,19 +103,19 @@ properties' values.
    <w>8</w>
    <h>56</h>
    <transformations>
-    <t1>
+    <transformation>
      <type>rotation</type>
      <property>/position/altitude-ft</property>
      <max>100000.0</max>
      <scale>0.36</scale>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>24</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l4>
- <l5>
+  </layer>
+ <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -125,6 +126,6 @@ properties' values.
   </texture>
   <w>16</w>
   <h>16</h>
-  </l5>
+  </layer>
  </layers>
 </PropertyList>

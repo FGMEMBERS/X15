@@ -26,12 +26,12 @@ properties' values.
 
 <PropertyList>
  <name>dynamic pressure</name>
- <w>110</w>
- <h>110</h>
+ <w-base>110</w-base>
+ <h-base>110</h-base>
 
  <layers>
 
-  <l1>
+  <layer>
    <name>face</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
@@ -40,9 +40,9 @@ properties' values.
     <x2>1.0</x2>
     <y2>0.5</y2>
    </texture>
-  </l1>
+  </layer>
   
-  <l2>
+  <layer>
    <name>needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -54,21 +54,21 @@ properties' values.
    <w>8</w>
    <h>45</h>
    <transformations>
-    <t1>
+    <transformation>
      <type>rotation</type>
      <property>/velocities/airspeed-kt</property>
      <min>0.0</min>
      <max>250.0</max>
      <scale>1</scale>
      <offset>210</offset>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>23</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l2>
-  <l3>
+  </layer>
+  <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -79,6 +79,6 @@ properties' values.
   </texture>
   <w>16</w>
   <h>16</h>
-  </l3>
+  </layer>
  </layers>
 </PropertyList>

@@ -26,12 +26,12 @@ properties' values.
 
 <PropertyList>
  <name>inertial climb</name>
- <w>110</w>
- <h>110</h>
+ <w-base>110</w-base>
+ <h-base>110</h-base>
 
  <layers>
 
-  <l1>
+  <layer>
    <name>face</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-2.rgb</path>
@@ -40,9 +40,9 @@ properties' values.
     <x2>0.5</x2>
     <y2>0.5</y2>
    </texture>
-  </l1>
+  </layer>
   
-  <l2>
+  <layer>
    <name>needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -54,11 +54,11 @@ properties' values.
    <w>8</w>
    <h>45</h>
    <transformations>
-    <t1>
+    <transformation>
     <type>x-shift</type>
     <offset>22</offset>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>rotation</type>
      <property>/steam/vertical-speed-fpm</property>
      <min>-1000.0</min>
@@ -66,15 +66,15 @@ properties' values.
      <scale>0.00835</scale>
      <offset>270</offset>
     <wrap>false</wrap>
-    </t2>
-    <t3>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>20</offset>
-    </t3>
+    </transformation>
    </transformations>
-  </l2>
+  </layer>
 
- <l3>
+ <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -86,11 +86,11 @@ properties' values.
   <w>16</w>
   <h>16</h>
    <transformations>
-    <t1>
+    <transformation>
     <type>x-shift</type>
     <offset>24</offset>
-    </t1>
+    </transformation>
   </transformations>
- </l3>
+ </layer>
  </layers>
 </PropertyList>

@@ -26,12 +26,12 @@ properties' values.
 
 <PropertyList>
  <name>inertial speed indicator</name>
- <w>125</w>
- <h>125</h>
+ <w-base>125</w-base>
+ <h-base>125</h-base>
 
  <layers>
 
-  <l1>
+  <layer>
    <name>background</name>
    <texture>
     <path>Aircraft/X15/Instruments/Textures/x15-faces-1.rgb</path>
@@ -40,9 +40,9 @@ properties' values.
     <x2>1.0</x2>
     <y2>1.0</y2>
    </texture>
-  </l1>
+  </layer>
   
-  <l2>
+  <layer>
    <name>needle</name>
    <texture>
     <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -54,24 +54,24 @@ properties' values.
    <w>8</w>
    <h>45</h>
    <transformations>
-    <t0>
+    <transformation>
      <type>rotation</type>
      <offset>25</offset>
-    </t0>
-    <t1>
+    </transformation>
+    <transformation>
      <type>rotation</type>
      <property>/velocities/airspeed-kt</property>
      <min>0.0</min>
      <max>7500.0</max>
      <scale>0.045</scale>
-    </t1>
-    <t2>
+    </transformation>
+    <transformation>
      <type>y-shift</type>
      <offset>23</offset>
-    </t2>
+    </transformation>
    </transformations>
-  </l2>
-  <l3>
+  </layer>
+  <layer>
   <name>button</name>
   <texture>
   <path>Aircraft/c172/Instruments/Textures/misc-1.rgb</path>
@@ -82,6 +82,6 @@ properties' values.
   </texture>
   <w>16</w>
   <h>16</h>
-  </l3>
+  </layer>
  </layers>
 </PropertyList>
