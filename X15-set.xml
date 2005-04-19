@@ -50,6 +50,10 @@ October 23 2001 John Check, fgpanels@rockfish.net
   </model_2> 
 -->
 
+  <help>
+   <title>X-15</title>
+  </help>
+
  </sim>
 
  <autopilot>
