@@ -7,7 +7,7 @@
     <fileheader>
         <author> Jon Berndt </author>
         <filecreationdate> 1998-07-01 </filecreationdate>
-        <version> $Revision$ </version>
+        <version> $Revision: 1.56 $ </version>
         <description> Models the X-15 hypersonic research aircraft </description>
         <reference refID="NASA-TN-D-6208" author="Anonymous" title="EXPERIENCE WITH THE X-15 ADAPTIVE FLIGHT CONTROL SYSTEM" date="March 1971"/>
         <reference refID="NASA-TN-D-2532" author="Roxanah B. Yancey" title="Flight Measurements of Stability and Control Derivatives of the X-15 Research Airplane to a Mach Number of 6.02 and an Angle of Attack of 25 degrees" date="1964"/>
@@ -45,8 +45,9 @@
         <ixy unit="SLUG*FT2"> 0 </ixy>
         <ixz unit="SLUG*FT2"> -590 </ixz>
         <iyz unit="SLUG*FT2"> 0 </iyz>
-        <emptywt unit="LBS"> 15560 </emptywt>
-        <location name="CG" unit="IN">
+<!--        <emptywt unit="LBS"> 15560 </emptywt> -->
+        <emptywt unit="LBS"> 14560 </emptywt> 
+      <location name="CG" unit="IN">
             <x> 345 </x>
             <y> 0 </y>
             <z> 0 </z>
@@ -54,7 +55,7 @@
     </mass_balance>
 
     <ground_reactions>
-        <contact type="BOGEY" name="NOSE">
+        <contact type="BOGEY" name="Nose Gear">
             <location unit="IN">
                 <x> 63 </x>
                 <y> 0 </y>
@@ -63,41 +64,73 @@
             <static_friction> 0.5 </static_friction>
             <dynamic_friction> 0.02 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 15000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 1000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 18000 </spring_coeff>
+            <damping_coeff unit="LBS/FT2/SEC2" type="SQUARE"> 40 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC"> 3000 </damping_coeff_rebound>
+            <relaxation_velocity>
+              <rolling unit="FT/SEC">0.4</rolling>
+              <side unit="FT/SEC">0.6</side>
+            </relaxation_velocity>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
+        
+          <force_lag_filter>
+            <rolling> 30 </rolling>
+            <side> 30 </side>
+          </force_lag_filter>
+          <wheel_slip_filter> 30 </wheel_slip_filter>
+
         </contact>
-        <contact type="BOGEY" name="LEFT_SKID">
+        <contact type="BOGEY" name="Left Skid">
             <location unit="IN">
                 <x> 540.6 </x>
                 <y> -56.8 </y>
                 <z> -76.6 </z>
             </location>
             <static_friction> 0.9 </static_friction>
-            <dynamic_friction> 0.2 </dynamic_friction>
-            <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 15000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 1000 </damping_coeff>
+            <dynamic_friction> 0.3 </dynamic_friction>
+            <rolling_friction> 0.3 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 1500 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC"> 7500 </damping_coeff_rebound>
+            <relaxation_velocity>
+              <rolling unit="FT/SEC">0.4</rolling>
+              <side unit="FT/SEC">0.6</side>
+            </relaxation_velocity>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
+          <force_lag_filter>
+            <rolling> 30 </rolling>
+            <side> 30 </side>
+          </force_lag_filter>
+          <wheel_slip_filter> 30 </wheel_slip_filter>
         </contact>
-        <contact type="BOGEY" name="RIGHT_SKID">
+        <contact type="BOGEY" name="Right Skid">
             <location unit="IN">
                 <x> 540.6 </x>
                 <y> 56.8 </y>
                 <z> -76.6 </z>
             </location>
             <static_friction> 0.9 </static_friction>
-            <dynamic_friction> 0.2 </dynamic_friction>
-            <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 15000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 1000 </damping_coeff>
+            <dynamic_friction> 0.3 </dynamic_friction>
+            <rolling_friction> 0.3 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 50000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 1500 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC"> 7500 </damping_coeff_rebound>
+            <relaxation_velocity>
+              <rolling unit="FT/SEC">0.4</rolling>
+              <side unit="FT/SEC">0.6</side>
+            </relaxation_velocity>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
+          <force_lag_filter>
+            <rolling> 30 </rolling>
+            <side> 30 </side>
+          </force_lag_filter>
+          <wheel_slip_filter> 30 </wheel_slip_filter>
         </contact>
     </ground_reactions>
     <propulsion>
@@ -134,7 +167,7 @@
                 <z> 0 </z>
             </location>
             <capacity unit="LBS"> 9470 </capacity>
-            <contents unit="LBS"> 9470 </contents>
+            <contents unit="LBS"> 0 </contents>
         </tank>
         <tank type="FUEL">    <!-- Tank number 1 -->
             <location unit="IN">
@@ -143,7 +176,7 @@
                 <z> 0 </z>
             </location>
             <capacity unit="LBS"> 8236 </capacity>
-            <contents unit="LBS"> 8236 </contents>
+            <contents unit="LBS"> 6 </contents>
         </tank>
     </propulsion>
     
